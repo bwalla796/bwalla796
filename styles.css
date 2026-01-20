@@ -1,3 +1,9 @@
+.icon {
+    width: 32px;
+    height: auto;
+    vertical-align: middle;
+}
+
 body {
     font-family: DejaVu Sans Mono, monospace;
     background-color: rgb(135, 206, 250);
@@ -17,7 +23,7 @@ ul {
 }
 
 button {
-    background-color: white; /* Green */
+    background-color: white;
     border: none;
     color: black;
     padding: 10px 24px;
