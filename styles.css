@@ -37,6 +37,11 @@ button {
     width: fit-content;
 }
 
+button:hover {
+    background-color: #b1adad;
+    transition: background-color 0.5s ease;
+}
+
 .container {
     display: flex;
     flex-direction: row;
