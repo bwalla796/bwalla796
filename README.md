@@ -1,6 +1,6 @@
 ## I'm Ben and I write full stack applications in LAMP(D)
 
-### Languages and Frameworks I am proficient in include:
+### Languages and Frameworks I'm proficient in include:
 
 - PHP (Legacy 5.5 to LTS)
 - JavaScript
