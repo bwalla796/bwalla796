@@ -1,6 +1,10 @@
 body {
     font-family: DejaVu Sans Mono, monospace;
     background-color: rgb(135, 206, 250);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
 }
 
 h3 {
@@ -40,4 +44,90 @@ button {
 .item {
     flex: 1 1 auto;
     margin: 10px;
+}
+
+.img-container {
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+.img-title {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white;
+  background-color: rgba(0, 0, 0, 0.0);
+  padding: 10px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.img-container:hover .img {
+  transition: filter 0.5s ease-in-out 0.3s;
+  filter: blur(5px);
+}
+
+.img-container:hover .img-title {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cloud {
+  width: 200px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px;
+  position: absolute;
+  z-index: -1;
+}
+
+.cloud:after, .cloud:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+.cloud:after { width: 100px; height: 100px; top: -50px; left: 50px; }
+.cloud:before { width: 120px; height: 120px; top: -70px; left: 20px; }
+
+@keyframes moveClouds {
+  from { left: -300px; }
+  to { left: 100%; }
+}
+
+.cloud-1 {
+  top: 50px;
+  animation: moveClouds 25s linear infinite;
+  transform: scale(0.8);
+  opacity: 0.9;
+}
+
+.cloud-2 {
+  top: 150px;
+  animation: moveClouds 35s linear infinite;
+  animation-delay: -5s; 
+  transform: scale(1.2);
+}
+
+.cloud-3 {
+  top: 250px;
+  animation: moveClouds 45s linear infinite;
+  animation-delay: -15s;
+  transform: scale(0.5);
+  opacity: 0.6;
 }
