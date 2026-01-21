@@ -11,12 +11,15 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   </head>
   <body>
+    <div class="stars"></div>
+    <div class="sun"></div>
     <div class="cloud cloud-1"></div>
     <div class="cloud cloud-2"></div>
     <div class="cloud cloud-3"></div>
     <div class="container">
       <h2 class="item"><img class="icon" src="images/favicon.ico" alt="Icon"> Benjamin Walla</h2>
       <div class="item">
+        <button id="toggle-theme" type="button" style="float: right;">Toggle Theme</button>
         <a href="index.html"><button type="button" style="float: right;">Portfolio</button></a>
       </div>
     </div>
@@ -63,4 +66,15 @@
       </div>
     </div>
   </body>
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        btn.textContent = "Light Mode";
+      } else {
+        btn.textContent = "Dark Mode";
+      }
+    });
+  </script>
 </html>
